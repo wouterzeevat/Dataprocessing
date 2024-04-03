@@ -1,0 +1,10 @@
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("GEOquery")
+BiocManager::install("affy")
+BiocManager::install("DESeq2")
+
+library(pander)
+library(scales)
+library(pheatmap)
+library('PoiClaClu')

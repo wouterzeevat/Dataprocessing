@@ -1,0 +1,4 @@
+files:
+  input:
+    counts: "data/GSE142174_16p11.2_CNVs_autism_organoids_study_counts.csv"
+    matrix: "data/GSE142174_series_matrix.txt"
