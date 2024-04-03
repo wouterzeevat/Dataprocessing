@@ -1,2 +1,6 @@
 *.png
+*.idea
 *.RData
+.snakemake/
+*.Rmd
+*.pdf
