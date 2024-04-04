@@ -7,15 +7,20 @@ include: "rules/density.smk"
 include: "rules/heatmap.smk"
 include: "rules/multidimentionalscaling.smk"
 include: "rules/preprocessing.smk"
+include: "rules/deseq_from_tsv_matrix.smk"
 
 rule all:
     input:
-        "objects/data.RData",
+        "processed/data.RData",
         "output/barplot.png",
         "output/boxplot.png",
         "output/density.png",
         "output/heatmap.png",
         "output/multidimentionalscaling.png",
-        "objects/preprocessed_data.RData"
+        "output/fold_change.png",
+        "processed/preprocessed_data.RData",
+        "processed/counts.tsv",
+        "processed/coldata.tsv",
+        "processed/dds_matrix.RDS"
     shell:
         "echo done"

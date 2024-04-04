@@ -5,6 +5,12 @@ load(args[1])
 # Note: log transformation includes a pseudocount of 1
 counts.fpm <- log2( (counts / (colSums(counts) / 1e6)) + 1 )
 
+groups <- factor(rep(1:9, each=12),
+                 labels = c("IPSC_CONTROL", "IPSC_DEL", "IPSC_DUP", "1M_CONTROL", "1M_DEL", "1M_DUP", "3M_CONTROL", "3M_DEL", "3M_DUP"))
+coldata <- names(counts)
+
+design <- model.matrix(~0 + groups)
+colnames(design) <- levels(groups)
 #The data will now be normalized by calculating the FPM.
 
 counts.filtered <-  counts.fpm[rowSums(counts.fpm != 0) > 0, ]
@@ -28,3 +34,6 @@ abline(v=1, col="red")
 dev.off()
 
 save(counts, metadata, ipsc_control, ipsc_del, ipsc_dup, one_m_control, one_m_del,one_m_dup, three_m_control, three_m_del, three_m_dup, file=args[2])
+write.table(counts, file=args[4], quote=FALSE, sep='\t', col.names = NA)
+write.table(data.frame(group = groups), file=args[5], quote=FALSE, sep='\t', col.names = NA)
+

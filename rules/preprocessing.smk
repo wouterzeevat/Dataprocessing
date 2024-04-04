@@ -1,7 +1,9 @@
 rule preprocessing:
-    input: "objects/data.RData"
+    input: "processed/data.RData"
     output:
-        "objects/preprocessed_data.RData",
-        "output/fold_changed.png"
+        "processed/preprocessed_data.RData",
+        "output/fold_change.png",
+        "processed/counts.tsv",
+        "processed/coldata.tsv"
     shell:
-        'rscript scripts/preprocessing.R {input} {output[0]} {output[1]}'
+        'rscript scripts/preprocessing.R {input} {output[0]} {output[1]} {output[2]} {output[3]}'
