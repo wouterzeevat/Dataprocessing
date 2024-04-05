@@ -2,7 +2,7 @@ library(pander)
 library(scales)
 
 args <- commandArgs(trailingOnly = TRUE)
-load(args[1])
+dds <- readRDS(args[1])
 
 png(file = args[2],   # The directory you want to save the file in
     width = 800, # The width of the plot in inches

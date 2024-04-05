@@ -8,7 +8,7 @@ rule deseq_from_tsv_matrix:
     log:
         "logs/DESeqDataSet/txt_matrix.log",
     params:
-        formula="~condition",  # Required R statistical formula
+        formula="~ 0 + group",  # Required R statistical formula
         # factor="condition", # Optionally used for relevel
         # reference_level="A", # Optionally used for relevel
         # tested_level="B", # Optionally used for relevel

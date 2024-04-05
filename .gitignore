@@ -1,8 +1,6 @@
-*.png
 *.idea
-*.RData
 .snakemake/
+logs/
+output/
+processed/
 *.Rmd
-*.pdf
-*.tsv
-*.RDS

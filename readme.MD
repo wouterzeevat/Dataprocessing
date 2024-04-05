@@ -12,10 +12,11 @@ library(pheatmap)
 library('PoiClaClu')
 library(readr)
 library(jsonlite)
+ashr
+gplots
+venndiagram
+ggvenn
 
 
 snakemake --dag | Out-File -FilePath workflow.dot -Encoding ascii
 dot -Tpng workflow.dot -o workflow.png
-
-#conda install -n base -c conda-forge mamba
-bioconductor-deseq2=1.42.0
