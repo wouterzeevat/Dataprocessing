@@ -13,28 +13,10 @@ include: "rules/deseq_results.smk"
 include: "rules/fold_change_comparison.smk"
 include: "rules/vulcano_plot.smk"
 include: "rules/venn_diagram.smk"
+include: "rules/output.smk"
 
 rule all:
     input:
-        "processed/data.RData",
-        "output/barplot.png",
-        "output/boxplot.png",
-        "output/density.png",
-        "output/heatmap.png",
-        "output/multidimentionalscaling.png",
-        "output/fold_change.png",
-        "processed/preprocessed_data.RData",
-        "processed/counts.tsv",
-        "processed/coldata.tsv",
-        "processed/dds_matrix.RDS",
-        "processed/results_deseq.RData",
-#        "output/results/group1M_CONTROL.tsv",
-        "output/fold_change_1m_control_del.png",
-        "output/fold_change_1m_control_dup.png",
-        "output/fold_change_1m_dup_del.png",
-        "output/vulcano_1m_control_del.png",
-        "output/vulcano_1m_control_dup.png",
-        "output/vulcano_1m_dup_del.png",
-        "output/venn_diagram.png"
+        "output/output.pdf"
     shell:
         "echo done"
