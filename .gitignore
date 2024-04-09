@@ -1,6 +1,5 @@
 *.idea
 .snakemake/
-logs/
 output/
 processed/
 *.Rmd

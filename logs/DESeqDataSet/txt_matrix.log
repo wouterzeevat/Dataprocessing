@@ -1,0 +1,477 @@
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: 'BiocGenerics'
+
+The following objects are masked from 'package:stats':
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from 'package:base':
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+
+Attaching package: 'S4Vectors'
+
+The following object is masked from 'package:utils':
+
+    findMatches
+
+The following objects are masked from 'package:base':
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: 'IRanges'
+
+The following object is masked from 'package:grDevices':
+
+    windows
+
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: 'MatrixGenerics'
+
+The following objects are masked from 'package:matrixStats':
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: 'Biobase'
+
+The following object is masked from 'package:MatrixGenerics':
+
+    rowMedians
+
+The following objects are masked from 'package:matrixStats':
+
+    anyMissing, rowMedians
+
+Libraries loaded
+         group
+1 IPSC_CONTROL
+2 IPSC_CONTROL
+3 IPSC_CONTROL
+4 IPSC_CONTROL
+5 IPSC_CONTROL
+6 IPSC_CONTROL
+~0 + group
+                Ipsc_control_clone_1_rep_1 Ipsc_control_clone_1_rep_2
+ENSG00000000003                       1126                       2088
+ENSG00000000005                         25                         29
+ENSG00000000419                        404                        700
+ENSG00000000457                        154                        241
+ENSG00000000460                        354                        695
+ENSG00000000938                          1                          2
+                Ipsc_control_clone_2_rep_1 Ipsc_control_clone_2_rep_2
+ENSG00000000003                       3389                       3178
+ENSG00000000005                         56                         54
+ENSG00000000419                       1018                       1165
+ENSG00000000457                        273                        306
+ENSG00000000460                        921                        995
+ENSG00000000938                          3                          7
+                Ipsc_control_clone_3_rep_1 Ipsc_control_clone_3_rep_2
+ENSG00000000003                        773                       1567
+ENSG00000000005                         20                         38
+ENSG00000000419                        390                        672
+ENSG00000000457                        165                        258
+ENSG00000000460                        344                        471
+ENSG00000000938                          4                          6
+                Ipsc_control_clone_4_rep_1 Ipsc_control_clone_4_rep_2
+ENSG00000000003                       1444                        600
+ENSG00000000005                         13                          8
+ENSG00000000419                        398                        173
+ENSG00000000457                        178                        147
+ENSG00000000460                        292                        241
+ENSG00000000938                          1                          4
+                Ipsc_control_clone_5_rep_1 Ipsc_control_clone_5_rep_2
+ENSG00000000003                       4002                       1939
+ENSG00000000005                         58                         38
+ENSG00000000419                       1335                        869
+ENSG00000000457                        424                        234
+ENSG00000000460                       1143                        776
+ENSG00000000938                          6                          9
+                Ipsc_control_clone_6_rep_1 Ipsc_control_clone_6_rep_2
+ENSG00000000003                       2211                       2030
+ENSG00000000005                         37                         44
+ENSG00000000419                        717                        607
+ENSG00000000457                        208                        197
+ENSG00000000460                        520                        546
+ENSG00000000938                          4                          6
+                Ipsc_Del_clone_1_rep_1 Ipsc_Del_clone_1_rep_2
+ENSG00000000003                    427                   1673
+ENSG00000000005                      5                     17
+ENSG00000000419                    164                    745
+ENSG00000000457                     70                    224
+ENSG00000000460                    153                    565
+ENSG00000000938                      1                      3
+                Ipsc_Del_clone_2_rep_1 Ipsc_Del_clone_2_rep_2
+ENSG00000000003                   1393                   3142
+ENSG00000000005                      9                     42
+ENSG00000000419                    496                   1074
+ENSG00000000457                    151                    389
+ENSG00000000460                    409                    897
+ENSG00000000938                      2                      9
+                Ipsc_Del_clone_3_rep_1 Ipsc_Del_clone_3_rep_2
+ENSG00000000003                   3203                   3614
+ENSG00000000005                     30                     41
+ENSG00000000419                   1077                   1113
+ENSG00000000457                    291                    287
+ENSG00000000460                   1021                    987
+ENSG00000000938                     13                      7
+                Ipsc_Del_clone_4_rep_1 Ipsc_Del_clone_4_rep_2
+ENSG00000000003                   3750                   3389
+ENSG00000000005                     48                     66
+ENSG00000000419                   1497                   1134
+ENSG00000000457                    388                    317
+ENSG00000000460                   1089                    798
+ENSG00000000938                     12                      0
+                Ipsc_Del_clone_5_rep_1 Ipsc_Del_clone_5_rep_2
+ENSG00000000003                    230                   1424
+ENSG00000000005                      4                     17
+ENSG00000000419                    104                    730
+ENSG00000000457                     41                    268
+ENSG00000000460                     86                    512
+ENSG00000000938                      0                      7
+                Ipsc_Del_clone_6_rep_1 Ipsc_Del_clone_6_rep_2
+ENSG00000000003                   1775                   1770
+ENSG00000000005                     28                     26
+ENSG00000000419                    842                    852
+ENSG00000000457                    240                    238
+ENSG00000000460                    558                    584
+ENSG00000000938                      3                      5
+                Ipsc_Dup_clone_1_rep_1 Ipsc_Dup_clone_1_rep_2
+ENSG00000000003                   1495                   1230
+ENSG00000000005                     19                     15
+ENSG00000000419                    566                    515
+ENSG00000000457                    254                    218
+ENSG00000000460                    628                    602
+ENSG00000000938                      3                      4
+                Ipsc_Dup_clone_2_rep_1 Ipsc_Dup_clone_2_rep_2
+ENSG00000000003                   1855                   1508
+ENSG00000000005                     16                     11
+ENSG00000000419                    559                    464
+ENSG00000000457                    208                    162
+ENSG00000000460                    696                    561
+ENSG00000000938                      6                      4
+                Ipsc_Dup_clone_3_rep_1 Ipsc_Dup_clone_3_rep_2
+ENSG00000000003                    984                   1800
+ENSG00000000005                     20                     25
+ENSG00000000419                    338                    602
+ENSG00000000457                    165                    227
+ENSG00000000460                    463                    620
+ENSG00000000938                      4                      5
+                Ipsc_Dup_clone_4_rep_1 Ipsc_Dup_clone_4_rep_2
+ENSG00000000003                    520                   1134
+ENSG00000000005                      5                     16
+ENSG00000000419                    296                    585
+ENSG00000000457                    105                    256
+ENSG00000000460                    310                    532
+ENSG00000000938                      1                      9
+                Ipsc_Dup_clone_5_rep_1 Ipsc_Dup_clone_5_rep_2
+ENSG00000000003                    665                    993
+ENSG00000000005                      5                      5
+ENSG00000000419                    336                    332
+ENSG00000000457                    172                    201
+ENSG00000000460                    335                    399
+ENSG00000000938                      0                      3
+                Ipsc_Dup_clone_6_rep_1 Ipsc_Dup_clone_6_rep_2
+ENSG00000000003                    552                    503
+ENSG00000000005                     14                      6
+ENSG00000000419                    359                    305
+ENSG00000000457                    170                    124
+ENSG00000000460                    375                    328
+ENSG00000000938                      6                      5
+                X1M_control_clone_1_rep_1 X1M_control_clone_1_rep_2
+ENSG00000000003                      2960                      3079
+ENSG00000000005                        49                        81
+ENSG00000000419                       763                       777
+ENSG00000000457                       471                       474
+ENSG00000000460                       313                       256
+ENSG00000000938                         0                         0
+                X1M_control_clone_2_rep_1 X1M_control_clone_2_rep_2
+ENSG00000000003                      3285                      3461
+ENSG00000000005                         5                         3
+ENSG00000000419                      1297                      1274
+ENSG00000000457                       562                       504
+ENSG00000000460                      1038                       904
+ENSG00000000938                         1                         0
+                X1M_control_clone_3_rep_1 X1M_control_clone_3_rep_2
+ENSG00000000003                      1731                      2814
+ENSG00000000005                         2                       148
+ENSG00000000419                       921                       729
+ENSG00000000457                       435                       571
+ENSG00000000460                       171                       222
+ENSG00000000938                         1                         0
+                X1M_control_clone_4_rep_1 X1M_control_clone_4_rep_2
+ENSG00000000003                      2278                      1923
+ENSG00000000005                         1                         1
+ENSG00000000419                      1089                       970
+ENSG00000000457                       509                       369
+ENSG00000000460                       396                       318
+ENSG00000000938                         0                         0
+                X1M_control_clone_5_rep_1 X1M_control_clone_5_rep_2
+ENSG00000000003                      3291                      3187
+ENSG00000000005                        14                        17
+ENSG00000000419                      1669                      1503
+ENSG00000000457                       587                       638
+ENSG00000000460                       710                       695
+ENSG00000000938                         0                         0
+                X1M_control_clone_6_rep_1 X1M_control_clone_6_rep_2
+ENSG00000000003                      6354                      7185
+ENSG00000000005                       173                       250
+ENSG00000000419                      1297                      1440
+ENSG00000000457                       651                       785
+ENSG00000000460                       237                       299
+ENSG00000000938                         1                         1
+                X1M_Del_clone_1_rep_1 X1M_Del_clone_1_rep_2
+ENSG00000000003                  2032                  3101
+ENSG00000000005                     6                    51
+ENSG00000000419                   864                   898
+ENSG00000000457                   348                   528
+ENSG00000000460                   403                   377
+ENSG00000000938                     1                     0
+                X1M_Del_clone_2_rep_1 X1M_Del_clone_2_rep_2
+ENSG00000000003                  3065                  2445
+ENSG00000000005                     4                     3
+ENSG00000000419                  1212                   897
+ENSG00000000457                   488                   443
+ENSG00000000460                   741                   544
+ENSG00000000938                     0                     0
+                X1M_Del_clone_3_rep_1 X1M_Del_clone_3_rep_2
+ENSG00000000003                  1730                  1569
+ENSG00000000005                     1                     1
+ENSG00000000419                  1005                   900
+ENSG00000000457                   342                   355
+ENSG00000000460                   258                   236
+ENSG00000000938                     0                     0
+                X1M_Del_clone_4_rep_1 X1M_Del_clone_4_rep_2
+ENSG00000000003                  2064                  1985
+ENSG00000000005                     1                     0
+ENSG00000000419                  1126                  1120
+ENSG00000000457                   475                   500
+ENSG00000000460                   596                   450
+ENSG00000000938                     0                     0
+                X1M_Del_clone_5_rep_1 X1M_Del_clone_5_rep_2
+ENSG00000000003                  5203                  4723
+ENSG00000000005                   106                    63
+ENSG00000000419                  1536                  1378
+ENSG00000000457                   913                   776
+ENSG00000000460                   661                   574
+ENSG00000000938                     0                     0
+                X1M_Del_clone_6_rep_1 X1M_Del_clone_6_rep_2
+ENSG00000000003                  2089                  2064
+ENSG00000000005                     2                     1
+ENSG00000000419                  1126                  1057
+ENSG00000000457                   449                   469
+ENSG00000000460                   441                   461
+ENSG00000000938                     1                     0
+                X1M_Dup_clone_1_rep_1 X1M_Dup_clone_1_rep_2
+ENSG00000000003                  4572                  4133
+ENSG00000000005                   255                    83
+ENSG00000000419                   898                  1050
+ENSG00000000457                   646                   724
+ENSG00000000460                   203                   299
+ENSG00000000938                     0                     0
+                X1M_Dup_clone_2_rep_1 X1M_Dup_clone_2_rep_2
+ENSG00000000003                  2068                  1983
+ENSG00000000005                     1                     1
+ENSG00000000419                  1134                  1162
+ENSG00000000457                   431                   376
+ENSG00000000460                   394                   414
+ENSG00000000938                     0                     1
+                X1M_Dup_clone_3_rep_1 X1M_Dup_clone_3_rep_2
+ENSG00000000003                  3195                  2246
+ENSG00000000005                    19                    10
+ENSG00000000419                  1587                  1069
+ENSG00000000457                   732                   558
+ENSG00000000460                   602                   458
+ENSG00000000938                     0                     0
+                X1M_Dup_clone_4_rep_1 X1M_Dup_clone_4_rep_2
+ENSG00000000003                  2128                  2226
+ENSG00000000005                     1                     2
+ENSG00000000419                  1114                  1271
+ENSG00000000457                   424                   543
+ENSG00000000460                   526                   648
+ENSG00000000938                     0                     0
+                X1M_Dup_clone_5_rep_1 X1M_Dup_clone_5_rep_2
+ENSG00000000003                  3758                  3749
+ENSG00000000005                    90                   135
+ENSG00000000419                   862                   832
+ENSG00000000457                   582                   542
+ENSG00000000460                   275                   308
+ENSG00000000938                     0                     0
+                X1M_Dup_clone_6_rep_1 X1M_Dup_clone_6_rep_2
+ENSG00000000003                  2938                  2692
+ENSG00000000005                   191                    50
+ENSG00000000419                  1005                  1010
+ENSG00000000457                   455                   427
+ENSG00000000460                   600                   760
+ENSG00000000938                     1                     0
+                X3M_control_clone_1_rep_1 X3M_control_clone_1_rep_2
+ENSG00000000003                      3298                      2269
+ENSG00000000005                        84                        66
+ENSG00000000419                       798                       560
+ENSG00000000457                       534                       417
+ENSG00000000460                       106                        95
+ENSG00000000938                         0                         0
+                X3M_control_clone_2_rep_1 X3M_control_clone_2_rep_2
+ENSG00000000003                      1494                      1822
+ENSG00000000005                        84                        95
+ENSG00000000419                       726                       645
+ENSG00000000457                       405                       534
+ENSG00000000460                       210                       104
+ENSG00000000938                         1                         2
+                X3M_control_clone_3_rep_1 X3M_control_clone_3_rep_2
+ENSG00000000003                      3381                      3863
+ENSG00000000005                        69                        32
+ENSG00000000419                       601                       535
+ENSG00000000457                       510                       545
+ENSG00000000460                       220                       232
+ENSG00000000938                         0                         0
+                X3M_control_clone_4_rep_1 X3M_control_clone_4_rep_2
+ENSG00000000003                      2225                      1822
+ENSG00000000005                        33                        45
+ENSG00000000419                       701                       569
+ENSG00000000457                       521                       437
+ENSG00000000460                       125                       114
+ENSG00000000938                         1                         0
+                X3M_control_clone_5_rep_1 X3M_control_clone_5_rep_2
+ENSG00000000003                      1794                      1850
+ENSG00000000005                        85                        88
+ENSG00000000419                       674                       700
+ENSG00000000457                       337                       352
+ENSG00000000460                       127                       129
+ENSG00000000938                         0                         1
+                X3M_control_clone_6_rep_1 X3M_control_clone_6_rep_2
+ENSG00000000003                      2191                      2022
+ENSG00000000005                        13                        15
+ENSG00000000419                       518                       505
+ENSG00000000457                       335                       311
+ENSG00000000460                       190                       155
+ENSG00000000938                         0                         0
+                X3M_Del_clone_1_rep_1 X3M_Del_clone_1_rep_2
+ENSG00000000003                  1907                  2077
+ENSG00000000005                   128                   119
+ENSG00000000419                   619                   715
+ENSG00000000457                   324                   373
+ENSG00000000460                    95                   111
+ENSG00000000938                     0                     0
+                X3M_Del_clone_2_rep_1 X3M_Del_clone_2_rep_2
+ENSG00000000003                  1897                  1439
+ENSG00000000005                    91                    53
+ENSG00000000419                   651                   508
+ENSG00000000457                   467                   308
+ENSG00000000460                   184                   103
+ENSG00000000938                     1                     1
+                X3M_Del_clone_3_rep_1 X3M_Del_clone_3_rep_2
+ENSG00000000003                  1129                  1050
+ENSG00000000005                   119                   104
+ENSG00000000419                   584                   540
+ENSG00000000457                   510                   445
+ENSG00000000460                   150                   159
+ENSG00000000938                     0                     1
+                X3M_Del_clone_4_rep_1 X3M_Del_clone_4_rep_2
+ENSG00000000003                  2500                  1982
+ENSG00000000005                    95                    61
+ENSG00000000419                   502                   351
+ENSG00000000457                   414                   305
+ENSG00000000460                   180                   151
+ENSG00000000938                     1                     1
+                X3M_Del_clone_5_rep_1 X3M_Del_clone_5_rep_2
+ENSG00000000003                  2055                  1196
+ENSG00000000005                     4                     6
+ENSG00000000419                   662                  1206
+ENSG00000000457                   413                   354
+ENSG00000000460                   206                    95
+ENSG00000000938                     0                     1
+                X3M_Del_clone_6_rep_1 X3M_Del_clone_6_rep_2
+ENSG00000000003                  1665                  1559
+ENSG00000000005                   103                    93
+ENSG00000000419                   597                   571
+ENSG00000000457                   319                   308
+ENSG00000000460                    92                   104
+ENSG00000000938                     1                     3
+                X3M_Dup_clone_1_rep_1 X3M_Dup_clone_1_rep_2
+ENSG00000000003                  2751                  3363
+ENSG00000000005                    70                    39
+ENSG00000000419                   583                   711
+ENSG00000000457                   615                   739
+ENSG00000000460                   152                   165
+ENSG00000000938                     0                     2
+                X3M_Dup_clone_2_rep_1 X3M_Dup_clone_2_rep_2
+ENSG00000000003                  2668                  2670
+ENSG00000000005                    23                    21
+ENSG00000000419                   892                   891
+ENSG00000000457                   504                   466
+ENSG00000000460                   277                   323
+ENSG00000000938                     0                     1
+                X3M_Dup_clone_3_rep_1 X3M_Dup_clone_3_rep_2
+ENSG00000000003                  1587                  1849
+ENSG00000000005                     6                     5
+ENSG00000000419                   577                  1191
+ENSG00000000457                   462                   319
+ENSG00000000460                   203                    82
+ENSG00000000938                     0                     4
+                X3M_Dup_clone_4_rep_1 X3M_Dup_clone_4_rep_2
+ENSG00000000003                  1498                  3262
+ENSG00000000005                    24                    78
+ENSG00000000419                   361                   861
+ENSG00000000457                   134                   396
+ENSG00000000460                    53                   118
+ENSG00000000938                     0                     0
+                X3M_Dup_clone_5_rep_1 X3M_Dup_clone_5_rep_2
+ENSG00000000003                  3079                  3036
+ENSG00000000005                    51                    54
+ENSG00000000419                   838                   812
+ENSG00000000457                   496                   503
+ENSG00000000460                   193                   170
+ENSG00000000938                     0                     1
+                X3M_Dup_clone_6_rep_1 X3M_Dup_clone_6_rep_2
+ENSG00000000003                  2551                  2764
+ENSG00000000005                    34                    35
+ENSG00000000419                   911                  1039
+ENSG00000000457                   324                   350
+ENSG00000000460                   236                   253
+ENSG00000000938                     0                     0
+Command line used to build DESeqDataSet object:
+DESeq2::DESeqDataSetFromMatrix(countData = count_matrix, colData = colData, design = formula)
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+No relevel performed, since either `factor`, `reference_level`, and/or `tested_level` are missing in `snakemake@params`.
+No count filtering performed since `min_count` is missing in `snakemake@params`
+DDS object saved, process over
