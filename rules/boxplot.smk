@@ -4,5 +4,6 @@ rule boxplot:
     """
     input: "processed/data.RData"
     output: "output/boxplot.png"
+    threads: 2
     shell:
         'rscript scripts/boxplot.R {input} {output}'

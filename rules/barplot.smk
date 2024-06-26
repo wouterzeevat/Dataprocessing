@@ -4,5 +4,6 @@ rule barplot:
     """
     input: "processed/data.RData"
     output: "output/barplot.png"
+    threads: 2
     shell:
         'rscript scripts/barplot.R {input} {output}'

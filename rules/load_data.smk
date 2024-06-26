@@ -6,5 +6,6 @@ rule load_data:
     preprocessing and generating graphs
     """
     output: "processed/data.RData"
+    threads: 18
     shell:
         'rscript scripts/load_data.R {config[files][input][counts]} {config[files][input][matrix]} {output}'

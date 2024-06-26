@@ -4,5 +4,6 @@ rule venn_diagram:
     """
     input: "processed/results_deseq.RData"
     output: "output/venn_diagram.png"
+    threads: 2
     shell:
         'rscript scripts/venn_diagram.R {input} {output}'

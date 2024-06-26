@@ -8,7 +8,7 @@ rule deseq_from_tsv_matrix:
         colData="processed/coldata.tsv",
     output:
         "processed/dds_matrix.RDS",
-    threads: 1
+    threads: 18
     log:
         "logs/DESeqDataSet/txt_matrix.log",
     params:

@@ -8,5 +8,6 @@ rule preprocessing:
         "output/fold_change.png",
         "processed/counts.tsv",
         "processed/coldata.tsv"
+    threads: 10
     shell:
         'rscript scripts/preprocessing.R {input} {output[0]} {output[1]} {output[2]} {output[3]}'

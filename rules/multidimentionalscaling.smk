@@ -4,5 +4,6 @@ rule multidimentionalscaling:
     """
     input: "processed/data.RData"
     output: "output/multidimentionalscaling.png"
+    threads: 8
     shell:
         'rscript scripts/multidimentionalscaling.R {input} {output}'

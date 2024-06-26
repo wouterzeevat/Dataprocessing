@@ -6,5 +6,6 @@ rule vulcano_plot:
     output: "output/vulcano_1m_control_del.png",
             "output/vulcano_1m_control_dup.png",
             "output/vulcano_1m_dup_del.png"
+    threads: 2
     shell:
         'rscript scripts/vulcano_plot.R {input} {output[0]} {output[1]} {output[2]}'

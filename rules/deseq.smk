@@ -16,7 +16,7 @@ rule deseq2_wald:
         shrink_extra="",
         results_extra="",
         contrast=[],
-    threads: 1
+    threads: 18
     log:
         "logs/deseq2.log",
     wrapper:

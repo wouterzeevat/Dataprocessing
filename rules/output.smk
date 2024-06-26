@@ -17,5 +17,6 @@ rule output:
         "output/vulcano_1m_dup_del.png",
         "output/venn_diagram.png",
     output: "output/output.pdf"
+    threads: 18
     shell:
         "python3 scripts/output.py {output} {input}"
