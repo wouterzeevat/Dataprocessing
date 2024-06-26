@@ -39,4 +39,4 @@ The final result of this project will be shown at the bottom of this readme!
 - SHELL: snakemake --dag | Out-File -FilePath workflow.dot -Encoding ascii
 - SHELL: dot -Tpng workflow.dot -o workflow.png
 
-![img](output.pdf)
+![Final PDF result file](output.pdf)
