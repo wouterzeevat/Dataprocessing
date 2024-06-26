@@ -1,4 +1,9 @@
 rule deseq2_wald:
+    """
+    This rule uses the deseq2 wrapper to run deseq on the previously made dds matrix. It is not very efficient and 
+    creates mostly useless files. This is why i ended up not using it, i left it in the project to show that
+    it is possible to use this
+    """
     input:
         dds="processed/dds_matrix.RDS",
     output:

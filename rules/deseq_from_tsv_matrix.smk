@@ -1,4 +1,8 @@
 rule deseq_from_tsv_matrix:
+    """
+    Creates a dds matrix by using the deseq2 wrapper and using the preprocessed counts and coldata files. The 
+    dds matrix will later be used to run deseq2 on.
+    """
     input:
         counts="processed/counts.tsv",
         colData="processed/coldata.tsv",

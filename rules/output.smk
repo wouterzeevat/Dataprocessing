@@ -1,4 +1,7 @@
 rule output:
+    """
+    Generates the final PDF file, with all the graphs. This is done by using a python script
+    """
     input:
         "output/barplot.png",
         "output/boxplot.png",

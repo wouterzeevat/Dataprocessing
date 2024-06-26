@@ -1,4 +1,7 @@
 rule preprocessing:
+    """
+    Preprocesses the data, and creates multiple new data files that will later be used by deseq2
+    """
     input: "processed/data.RData"
     output:
         "processed/preprocessed_data.RData",
