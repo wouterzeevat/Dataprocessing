@@ -1,4 +1,4 @@
-configfile: "config.YAML"
+configfile: "config.yaml"
 
 include: "rules/load_data.smk"
 include: "rules/barplot.smk"

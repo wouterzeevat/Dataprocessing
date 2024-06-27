@@ -39,6 +39,12 @@ install.packages(c("pander", "scales", "pheatmap", "'PoiClaClu'", "readr", "json
  install(c("GEOquery", "affy", "DESeq2", "EnhancedVolcano", "tximport"))
 ```
 
+## Run the project
+Firstly, make sure the slurm config is set correctly
+```
+snakemake --profile slurm 
+```
+
 ## Dependencies
 - R = 4.2
 - Python3
