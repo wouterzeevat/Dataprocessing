@@ -1,0 +1,224 @@
+Building DAG of jobs...
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+barplot                        1
+boxplot                        1
+density                        1
+deseq_from_tsv_matrix          1
+deseq_results                  1
+fold_change_comparison         1
+heatmap                        1
+load_data                      1
+multidimentionalscaling        1
+output                         1
+preprocessing                  1
+venn_diagram                   1
+vulcano_plot                   1
+total                         14
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:17:36 2024]
+localrule load_data:
+    output: processed/data.RData
+    jobid: 3
+    reason: Missing output files: processed/data.RData
+    threads: 12
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:17:49 2024]
+Finished job 3.
+1 of 14 steps (7%) done
+Select jobs to execute...
+Execute 3 jobs...
+
+[Thu Jun 27 19:17:49 2024]
+localrule boxplot:
+    input: processed/data.RData
+    output: output/boxplot.png
+    jobid: 4
+    reason: Missing output files: output/boxplot.png; Input files updated by another job: processed/data.RData
+    threads: 2
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+
+[Thu Jun 27 19:17:49 2024]
+localrule multidimentionalscaling:
+    input: processed/data.RData
+    output: output/multidimentionalscaling.png
+    jobid: 7
+    reason: Missing output files: output/multidimentionalscaling.png; Input files updated by another job: processed/data.RData
+    threads: 8
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+
+[Thu Jun 27 19:17:49 2024]
+localrule density:
+    input: processed/data.RData
+    output: output/density.png
+    jobid: 5
+    reason: Missing output files: output/density.png; Input files updated by another job: processed/data.RData
+    threads: 2
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:17:51 2024]
+Finished job 4.
+2 of 14 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:17:51 2024]
+localrule barplot:
+    input: processed/data.RData
+    output: output/barplot.png
+    jobid: 2
+    reason: Missing output files: output/barplot.png; Input files updated by another job: processed/data.RData
+    threads: 2
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:17:51 2024]
+Finished job 5.
+3 of 14 steps (21%) done
+Select jobs to execute...
+[Thu Jun 27 19:17:52 2024]
+Finished job 2.
+4 of 14 steps (29%) done
+[Thu Jun 27 19:20:11 2024]
+Finished job 7.
+5 of 14 steps (36%) done
+Execute 1 jobs...
+
+[Thu Jun 27 19:20:11 2024]
+localrule preprocessing:
+    input: processed/data.RData
+    output: processed/preprocessed_data.RData, output/fold_change.png, processed/counts.tsv, processed/coldata.tsv
+    jobid: 8
+    reason: Missing output files: output/fold_change.png, processed/counts.tsv, processed/coldata.tsv; Input files updated by another job: processed/data.RData
+    threads: 10
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:20:17 2024]
+Finished job 8.
+6 of 14 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:20:17 2024]
+localrule deseq_from_tsv_matrix:
+    input: processed/counts.tsv, processed/coldata.tsv
+    output: processed/dds_matrix.RDS
+    log: logs/DESeqDataSet/txt_matrix.log
+    jobid: 11
+    reason: Missing output files: processed/dds_matrix.RDS; Input files updated by another job: processed/counts.tsv, processed/coldata.tsv
+    threads: 12
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:20:38 2024]
+Finished job 11.
+7 of 14 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:20:38 2024]
+localrule heatmap:
+    input: processed/data.RData
+    output: output/heatmap.png
+    jobid: 6
+    reason: Missing output files: output/heatmap.png; Input files updated by another job: processed/data.RData
+    threads: 8
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:20:48 2024]
+Finished job 6.
+8 of 14 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:20:48 2024]
+localrule deseq_results:
+    input: processed/dds_matrix.RDS
+    output: processed/results_deseq.RData
+    jobid: 10
+    reason: Missing output files: processed/results_deseq.RData; Input files updated by another job: processed/dds_matrix.RDS
+    threads: 12
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:22:40 2024]
+Finished job 10.
+9 of 14 steps (64%) done
+Select jobs to execute...
+Execute 3 jobs...
+
+[Thu Jun 27 19:22:40 2024]
+localrule vulcano_plot:
+    input: processed/results_deseq.RData
+    output: output/vulcano_1m_control_del.png, output/vulcano_1m_control_dup.png, output/vulcano_1m_dup_del.png
+    jobid: 12
+    reason: Missing output files: output/vulcano_1m_dup_del.png, output/vulcano_1m_control_dup.png, output/vulcano_1m_control_del.png; Input files updated by another job: processed/results_deseq.RData
+    threads: 2
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+
+[Thu Jun 27 19:22:40 2024]
+localrule venn_diagram:
+    input: processed/results_deseq.RData
+    output: output/venn_diagram.png
+    jobid: 13
+    reason: Missing output files: output/venn_diagram.png; Input files updated by another job: processed/results_deseq.RData
+    threads: 2
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+
+[Thu Jun 27 19:22:40 2024]
+localrule fold_change_comparison:
+    input: processed/results_deseq.RData
+    output: output/fold_change_1m_control_del.png, output/fold_change_1m_control_dup.png, output/fold_change_1m_dup_del.png
+    jobid: 9
+    reason: Missing output files: output/fold_change_1m_control_del.png, output/fold_change_1m_control_dup.png, output/fold_change_1m_dup_del.png; Input files updated by another job: processed/results_deseq.RData
+    threads: 8
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:22:47 2024]
+Finished job 13.
+10 of 14 steps (71%) done
+[Thu Jun 27 19:22:52 2024]
+Finished job 9.
+11 of 14 steps (79%) done
+[Thu Jun 27 19:22:53 2024]
+Finished job 12.
+12 of 14 steps (86%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:22:53 2024]
+localrule output:
+    input: output/barplot.png, output/boxplot.png, output/density.png, output/heatmap.png, output/multidimentionalscaling.png, output/fold_change.png, output/fold_change_1m_control_del.png, output/fold_change_1m_control_dup.png, output/fold_change_1m_dup_del.png, output/vulcano_1m_control_del.png, output/vulcano_1m_control_dup.png, output/vulcano_1m_dup_del.png, output/venn_diagram.png
+    output: output/output.pdf
+    jobid: 1
+    reason: Missing output files: output/output.pdf; Input files updated by another job: output/barplot.png, output/boxplot.png, output/vulcano_1m_control_del.png, output/heatmap.png, output/vulcano_1m_dup_del.png, output/fold_change_1m_control_dup.png, output/fold_change_1m_dup_del.png, output/vulcano_1m_control_dup.png, output/multidimentionalscaling.png, output/fold_change.png, output/fold_change_1m_control_del.png, output/venn_diagram.png, output/density.png
+    threads: 12
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:22:54 2024]
+Finished job 1.
+13 of 14 steps (93%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jun 27 19:22:54 2024]
+localrule all:
+    input: output/output.pdf
+    jobid: 0
+    reason: Rules with a run or shell declaration but no output are always executed.
+    resources: tmpdir=C:\Users\wouter\AppData\Local\Temp
+
+[Thu Jun 27 19:22:54 2024]
+Finished job 0.
+14 of 14 steps (100%) done
+Complete log: .snakemake\log\2024-06-27T191735.612791.snakemake.log
