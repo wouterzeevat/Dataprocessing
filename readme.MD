@@ -15,6 +15,20 @@ Change the config.yaml parameters to the files you would like the project to use
 ## Workflow
 ![img](workflow/workflow.png)
 
+## Install
+First, install conda and create a conda env. Install snakemake in it.
+```commandline
+conda create -n env_name
+conda activate env_name
+conda install -c bioconda -c conda-forge snakemake
+```
+Then load the repository and locate to it.
+```commandline
+cd project-location
+```
+Also make sure python and R are installed (versions below here). The R packages and Biocmanager packages will be 
+installed automatically in the project. If it does not work you can install it manually aswell.
+
 ## Dependencies
 - R = 4.2
 - Python3
