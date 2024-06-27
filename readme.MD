@@ -41,10 +41,16 @@ install.packages(c("pander", "scales", "pheatmap", "'PoiClaClu'", "readr", "json
 
 ## Run the project
 Firstly, make sure the slurm config is set correctly
-```
+```commandline
 snakemake --profile slurm 
 ```
+Run the project by doing:
+```commandline
+snakemake -c all
+snakemake -c all -C counts="countdata.csv" matrix="matrix.txt"
 
+```
+You can also change the input data by manually changing the config.yaml
 ## Dependencies
 - R = 4.2
 - Python3
