@@ -26,8 +26,18 @@ Then load the repository and locate to it.
 ```commandline
 cd project-location
 ```
-Also make sure python and R are installed (versions below here). The R packages and Biocmanager packages will be 
-installed automatically in the project. If it does not work you can install it manually aswell.
+Also make sure python and R are installed (versions below here). 
+Lastly, install all the R, python and biocmanager packages!
+
+```commandline
+python3 -m pip install --upgrade Pillow
+R
+install.packages(c("pander", "scales", "pheatmap", "'PoiClaClu'", "readr", "jsonlite",
+ "ashr", "gplots", "venndiagram", "ggvenn", "BiocManager"))
+ 
+ library(BiocManager)
+ install(c("GEOquery", "affy", "DESeq2", "EnhancedVolcano", "tximport"))
+```
 
 ## Dependencies
 - R = 4.2
@@ -59,7 +69,6 @@ installed automatically in the project. If it does not work you can install it m
 
 #### python packages
 - Pillow
-- shell: python3 -m pip install --upgrade Pillow
 
 
 ### Create workflow visualisation
